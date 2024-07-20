@@ -1,11 +1,18 @@
 package com.example.web_app_api.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import org.springframework.stereotype.Component;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+
+@Component
 @Data
-@AllArgsConstructor
+@RequiredArgsConstructor
+@Entity
 public class Product {
+    @Id
     private int prodId;
     private String prodName;
     private int price;
